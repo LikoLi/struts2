@@ -4,12 +4,15 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
-    <package name="hellodemo" extends="struts-default" namespace="/">
+    <!-- <package name="hellodemo" extends="struts-default" namespace="/">
         
-        <!-- name: 访问路径 -->
+        name: 访问路径
         <action name="hello" class="org.liko.framework.struts2.HelloAction">
-            <!-- 配置方法的返回值到页面 -->
+            配置方法的返回值到页面
             <result name="ok">/hello.jsp</result>
         </action>
-    </package>
+    </package> -->
+    
+    <!-- 引入hello.xml 配置文件 -->
+    <include file="org/liko/framework/struts2/hello.xml"></include>
 </struts>

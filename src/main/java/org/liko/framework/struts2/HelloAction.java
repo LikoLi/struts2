@@ -13,4 +13,12 @@ public class HelloAction {
 	public String execute() {
 		return "ok";
 	}
+	
+	public String add() {
+		return "add";
+	}
+	
+	public String update() {
+		return "update";
+	}
 }
