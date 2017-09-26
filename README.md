@@ -42,5 +42,14 @@
 			      <url-pattern>/*</url-pattern>
 			  </filter-mapping>
 		```
+
+### Struts2执行过程
+	- url请求
+	- struts2过滤器
+		- 获取请求路径,得到路径里面的请求值(hello)
+		- 在src下面找到struts.xml, 使用dom4j解析, 得到xml文件中的内容
+		- 使用(hello) 在xml文件中找action标签, 匹配name属性值是否一样
+		- 使用匹配的action标签, 得到class属性的值, 使用反射调用对应的方法
+		- 得到方法的返回值, 匹配值action标签里面匹配result标签里面的name属性, 匹配成功, 跳转到配置页面中去
 		
 	
